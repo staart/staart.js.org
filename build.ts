@@ -10,6 +10,7 @@ console.log("Building website...");
 const build = async () => {
   const content = marked(
     (await readFile(join(__dirname, "..", "README.md"))).toString()
+    .replace("# staart.js.org", "")
   );
   const xhtml = (await readFile(join(__dirname, "..", "index.html")))
     .toString()

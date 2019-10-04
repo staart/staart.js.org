@@ -118,7 +118,11 @@ a {
   }
 }
 
-h2 {
+a + a {
+  margin-left: 1.5rem;
+}
+
+h2, h3 {
   font-weight: 700;
   font-size: 90%;
   text-transform: uppercase;
@@ -127,6 +131,10 @@ h2 {
   + p {
     margin-top: 0;
   }
+}
+
+h3 {
+  font-size: 85%;
 }
 
 footer {
