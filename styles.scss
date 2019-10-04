@@ -1,7 +1,7 @@
-$theme: #1e4147;
-$text-color: #00171b;
-$link-color: #006365;
-$light-color: #fae3b4;
+$theme: #0e632c;
+$text-color: #001b01;
+$link-color: #0e632c;
+$light-color: #fff;
 
 @font-face {
   font-family: "Public Sans";
@@ -81,7 +81,6 @@ main {
 header {
   background-color: $theme;
   color: $light-color;
-  text-align: center;
   padding: 10vh 0 7.5vh 0;
   .icon {
     width: 5rem;
