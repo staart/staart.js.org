@@ -1,9 +1,8 @@
 {
-  "name": "accessibilityguidelines.com",
-  "version": "0.1",
-  "description": "Accessibility guidelines",
-  "main": "dist/index.js",
-  "repository": "git@github.com:AnandChowdhary/accessibilityguidelines.com",
+  "name": "staart.js.org",
+  "version": "1.0.0",
+  "description": "Landing page for O15Y's SaaS starter project, Staart",
+  "repository": "git@github.com:staart/staart.js.org",
   "author": "Anand Chowdhary <mail@anandchowdhary.com>",
   "license": "MIT",
   "scripts": {
