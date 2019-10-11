@@ -4,6 +4,7 @@ import { render } from "sass";
 import { minify } from "html-minifier";
 import recursive from "recursive-readdir";
 import marked from "marked";
+import axios from "axios";
 
 const startTime = new Date().getTime();
 console.log("Building website...");
@@ -13,9 +14,11 @@ const build = async () => {
     f => f.split("content/")[1]
   );
   for await (const file of files) {
+    const lastCommit = await getLastCommit(`content/${file}`);
     const text = (await readFile(join(__dirname, "..", `content/${file}`)))
       .toString()
-      .replace("# Home", "");
+      .replace("# Home", "") +
+      `${lastCommit ? `\n\nLast modified by [${lastCommit.commit.author.name}](${lastCommit.author.html_url}) on ${new Date(lastCommit.commit.author.date).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}` : ''} in [${lastCommit.sha.substr(0, 6)}](${lastCommit.html_url})`;
     const content = marked(text);
     let extra = "";
     if (file === "sitemap.md") {
@@ -91,6 +94,27 @@ const build = async () => {
       })
     );
   }
+};
+
+const getLastCommit = async (file: string): Promise<{
+  html_url: string;
+  sha: string;
+  author: {
+    login: string;
+    name: string;
+    avatar_url: string;
+    html_url: string;
+  };
+  commit: {
+    message: string;
+    author: {
+      name: string;
+      email: string;
+      date: string;
+    }
+  };
+}> => {
+  return (await axios.get(`https://api.github.com/repos/staart/staart.js.org/commits?path=${file}`)).data[0];
 };
 
 const renderScss = (data: string) =>

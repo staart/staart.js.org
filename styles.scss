@@ -141,7 +141,8 @@ a {
   }
 }
 
-a + a {
+header a + a,
+footer a + a {
   margin-left: 1.5rem;
 }
 
