@@ -2,14 +2,16 @@ import { readFile, writeFile, copy } from "fs-extra";
 import { join } from "path";
 import { render } from "sass";
 import { minify } from "html-minifier";
+import recursive from "recursive-readdir";
 import marked from "marked";
 
 const startTime = new Date().getTime();
 console.log("Building website...");
 
 const build = async () => {
+  const files = (await recursive(join(__dirname, "..", "content"))).map(f => f.split("content/")[1]);
   const content = marked(
-    (await readFile(join(__dirname, "..", "README.md"))).toString()
+    (await readFile(join(__dirname, "..", "content/index.md"))).toString()
     .replace("# staart.js.org", "")
   );
   const xhtml = (await readFile(join(__dirname, "..", "index.html")))
