@@ -15,10 +15,33 @@ const build = async () => {
   );
   for await (const file of files) {
     const lastCommit = await getLastCommit(`content/${file}`);
-    const text = (await readFile(join(__dirname, "..", `content/${file}`)))
-      .toString()
-      .replace("# Home", "") +
-      `${lastCommit ? `\n\nLast modified by [${lastCommit.commit.author.name}](${lastCommit.author.html_url}) on ${new Date(lastCommit.commit.author.date).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}` : ''} in [${lastCommit.sha.substr(0, 6)}](${lastCommit.html_url})`;
+    const text =
+      (await readFile(join(__dirname, "..", `content/${file}`)))
+        .toString()
+        .replace("# Home", "") +
+      `${
+        lastCommit
+          ? `\n\n<p class="post-footer">This page was last modified by <a href="${
+              lastCommit.author.html_url
+            }" target="_blank">${
+              lastCommit.commit.author.name
+            }</a> on <time datetime="${
+              lastCommit.commit.author.date
+            }">${new Date(lastCommit.commit.author.date).toLocaleDateString(
+              "en-US",
+              {
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+              }
+            )}</time>`
+          : ""
+      } in <a href="${
+        lastCommit.html_url
+      }" target="_blank">${lastCommit.sha.substr(
+        0,
+        6
+      )}</a>. <a href="https://github.com/staart/staart.js.org/blob/master/content/${file}">Edit this page on GitHub</a></p>`;
     const content = marked(text);
     let extra = "";
     if (file === "sitemap.md") {
@@ -96,7 +119,9 @@ const build = async () => {
   }
 };
 
-const getLastCommit = async (file: string): Promise<{
+const getLastCommit = async (
+  file: string
+): Promise<{
   html_url: string;
   sha: string;
   author: {
@@ -111,10 +136,12 @@ const getLastCommit = async (file: string): Promise<{
       name: string;
       email: string;
       date: string;
-    }
+    };
   };
 }> => {
-  return (await axios.get(`https://api.github.com/repos/staart/staart.js.org/commits?path=${file}`)).data[0];
+  return (await axios.get(
+    `https://api.github.com/repos/staart/staart.js.org/commits?path=${file}`
+  )).data[0];
 };
 
 const renderScss = (data: string) =>
