@@ -1,29 +1,19 @@
 # staart.js.org
 
-Staart helps you kickstart your SaaS startup with open-source starter projects written in TypeScript by [O15Y](https://o15y.com).
+[![Travis CI](https://img.shields.io/travis/staart/staart.js.org)](https://travis-ci.org/staart/staart.js.org)
 
-## 🏁 Staart Ecosystem
+Staart helps you kickstart your SaaS startup with open-source starter projects written in TypeScript by [O15Y](https://o15y.com). This repo contains the Staart website.
 
-### 🛠️ Staart
+## 🛠 Development
 
-Staart is a Node.js backend starter with built-in user management and authentication, billing, organizations, GDPR tools, and more.
+Compile static site generator and build site:
 
-[View source on GitHub](https://github.com/o15y/staart) [Download on npm](https://npmjs.com/package/@staart/manager)
+```bash
+yarn build
+```
 
-### 🌐 Staart UI
 
-Staart UI is a frontend starter with built-in landing pages, authentication, settings UIs, and more, powered by Nuxt.js/Vue.
+## 📄 License
 
-[View source on GitHub](https://github.com/o15y/staart-ui) [Download on npm](https://npmjs.com/package/@staart/ui)
-
-### 📱 Staart Native
-
-Staart Native is a smartphone app starter in React Native using Expo with built-in authentication and Start UI webviews.
-
-[View source on GitHub](https://github.com/o15y/staart-native) [Download on npm](https://npmjs.com/package/@staart/native)
-
-### 🎨 Staart.css
-
-Staart.css is a minimalist CSS framework with UI components powering Staart UI.
-
-[View source on GitHub](https://github.com/o15y/staart.css) [Download on npm](https://npmjs.com/package/@staart/css)
+- Code: [MIT](https://github.com/staart/staart.js.org/blob/master/LICENSE)
+- Logo and assets: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
