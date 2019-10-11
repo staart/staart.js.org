@@ -13,21 +13,38 @@ const build = async () => {
     f => f.split("content/")[1]
   );
   for await (const file of files) {
-    const content = marked(
-      (await readFile(join(__dirname, "..", `content/${file}`)))
-        .toString()
-        .replace("# staart.js.org", "")
-    );
+    const text = (await readFile(join(__dirname, "..", `content/${file}`)))
+      .toString()
+      .replace("# Home", "");
+    const content = marked(text);
+    let extra = "";
+    if (file === "sitemap.md") {
+      for await (const f of files) {
+        const fContent = (await readFile(
+          join(__dirname, "..", `content/${f}`)
+        )).toString();
+        const title = fContent.split("\n")[0].replace("# ", "");
+        extra += `- [${title}](/${f.replace(".md", ".html")})\n`;
+      }
+    }
+    const title = text.split("\n")[0].replace("# ", "");
+    extra = marked(extra);
     const xhtml = (await readFile(join(__dirname, "..", "index.html")))
       .toString()
-      .replace("</main>", `${content}</main>`);
+      .replace("</main>", `${content}${extra}</main>`);
     const scss = (await readFile(
       join(__dirname, "..", "styles.scss")
     )).toString();
     const css = <string>await renderScss(scss);
     const html = xhtml
       .replace("<!-- inject css -->", `<style>${css}</style>`)
-      .replace("<!-- year -->", new Date().getUTCFullYear().toString());
+      .replace("<!-- year -->", new Date().getUTCFullYear().toString())
+      .replace(
+        "<title>Staart</title>",
+        `<title>${
+          file !== "index.md" ? `${title} &middot; Staart` : "Staart"
+        }</title>`
+      );
     await ensureDir(join(__dirname, "..", "public", "assets"));
     await copy(
       join(__dirname, "..", "assets"),

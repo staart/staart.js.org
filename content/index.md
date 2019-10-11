@@ -1,4 +1,4 @@
-# staart.js.org
+# Home
 
 Staart helps you kickstart your SaaS startup with open-source starter projects written in TypeScript by [O15Y](https://o15y.com).
 

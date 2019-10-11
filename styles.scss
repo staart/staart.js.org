@@ -85,6 +85,14 @@ header {
   background-color: $theme;
   color: $light-color;
   padding: 7.5vh 0 0 0;
+  a {
+    display: inline-block;
+    color: inherit;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
   nav {
     margin-top: 5vh;
     padding: 1rem 0;
