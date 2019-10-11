@@ -62,7 +62,9 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
   line-height: 1.2;
 }
 
@@ -194,6 +196,20 @@ blockquote {
     width: auto;
     height: auto;
   }
+}
+
+code {
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  background-color: whitesmoke;
+  color: #ab2323;
+  font-size: 80%;
+  padding: 0.2rem 0.4rem;
+  margin: 0 0.1rem;
+  border-radius: 0.2rem;
+}
+
+pre {
+  font-size: 70% !important;
 }
 
 @media (max-width: 500px) {
