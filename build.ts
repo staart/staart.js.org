@@ -1,4 +1,4 @@
-import { readFile, writeFile, copy, ensureFile } from "fs-extra";
+import { readFile, writeFile, copy, ensureFile, ensureDir } from "fs-extra";
 import { join } from "path";
 import { render } from "sass";
 import { minify } from "html-minifier";
@@ -9,11 +9,14 @@ const startTime = new Date().getTime();
 console.log("Building website...");
 
 const build = async () => {
-  const files = (await recursive(join(__dirname, "..", "content"))).map(f => f.split("content/")[1]);
+  const files = (await recursive(join(__dirname, "..", "content"))).map(
+    f => f.split("content/")[1]
+  );
   for await (const file of files) {
     const content = marked(
-      (await readFile(join(__dirname, "..", `content/${file}`))).toString()
-      .replace("# staart.js.org", "")
+      (await readFile(join(__dirname, "..", `content/${file}`)))
+        .toString()
+        .replace("# staart.js.org", "")
     );
     const xhtml = (await readFile(join(__dirname, "..", "index.html")))
       .toString()
@@ -25,8 +28,14 @@ const build = async () => {
     const html = xhtml
       .replace("<!-- inject css -->", `<style>${css}</style>`)
       .replace("<!-- year -->", new Date().getUTCFullYear().toString());
-    await copy(join(__dirname, "..", "assets"), join(__dirname, "public", "assets"));
-    await ensureFile(join(__dirname, "..", "public", file.replace(".md", ".html")));
+    await ensureDir(join(__dirname, "..", "public", "assets"));
+    await copy(
+      join(__dirname, "..", "assets"),
+      join(__dirname, "..", "public", "assets")
+    );
+    await ensureFile(
+      join(__dirname, "..", "public", file.replace(".md", ".html"))
+    );
     await writeFile(
       join(__dirname, "..", "public", file.replace(".md", ".html")),
       minify(html, {
