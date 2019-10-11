@@ -79,9 +79,22 @@ main {
 }
 
 header {
+  text-align: center;
   background-color: $theme;
   color: $light-color;
-  padding: 7.5vh 0 5vh 0;
+  padding: 7.5vh 0 0 0;
+  nav {
+    margin-top: 5vh;
+    padding: 1rem 0;
+    background-color: whitesmoke;
+    color: $text-color;
+    font-size: 130%;
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
   .icon {
     width: 5rem;
     margin: 0 2rem 2rem 0;
@@ -193,5 +206,11 @@ blockquote {
   }
   footer div {
     font-size: 1rem;
+  }
+  header nav > div {
+    a {
+      width: 50%;
+      margin: 0.5rem 0;
+    }
   }
 }
