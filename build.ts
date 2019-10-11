@@ -27,6 +27,22 @@ const build = async () => {
         extra += `- [${title}](/${f.replace(".md", ".html")})\n`;
       }
     }
+    for await (const type of ["backend", "ui", "native", "css"]) {
+      if (file === `${type}/index.md`) {
+        extra += "## Articles\n\n";
+        const iFiles = (await recursive(
+          join(__dirname, "..", "content", type)
+        )).map(f => f.split(`content/${type}/`)[1]);
+        for await (const f of iFiles) {
+          const fContent = (await readFile(
+            join(__dirname, "..", "content", type, f)
+          )).toString();
+          const title = fContent.split("\n")[0].replace("# ", "");
+          if (!f.endsWith("index.md"))
+            extra += `- [${title}](/${type}/${f.replace(".md", ".html")})\n`;
+        }
+      }
+    }
     const title = text.split("\n")[0].replace("# ", "");
     extra = marked(extra);
     const xhtml = (await readFile(join(__dirname, "..", "index.html")))
