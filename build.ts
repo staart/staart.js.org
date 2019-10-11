@@ -1,4 +1,4 @@
-import { readFile, writeFile, copy } from "fs-extra";
+import { readFile, writeFile, copy, ensureFile } from "fs-extra";
 import { join } from "path";
 import { render } from "sass";
 import { minify } from "html-minifier";
@@ -10,42 +10,45 @@ console.log("Building website...");
 
 const build = async () => {
   const files = (await recursive(join(__dirname, "..", "content"))).map(f => f.split("content/")[1]);
-  const content = marked(
-    (await readFile(join(__dirname, "..", "content/index.md"))).toString()
-    .replace("# staart.js.org", "")
-  );
-  const xhtml = (await readFile(join(__dirname, "..", "index.html")))
-    .toString()
-    .replace("</main>", `${content}</main>`);
-  const scss = (await readFile(
-    join(__dirname, "..", "styles.scss")
-  )).toString();
-  const css = <string>await renderScss(scss);
-  const html = xhtml
-    .replace("<!-- inject css -->", `<style>${css}</style>`)
-    .replace("<!-- year -->", new Date().getUTCFullYear().toString());
-  await copy(join(__dirname, "..", "assets"), join(__dirname, "assets"));
-  await writeFile(
-    join(__dirname, "index.html"),
-    minify(html, {
-      collapseBooleanAttributes: true,
-      collapseInlineTagWhitespace: true,
-      collapseWhitespace: true,
-      conservativeCollapse: true,
-      minifyCSS: true,
-      minifyJS: true,
-      minifyURLs: true,
-      removeAttributeQuotes: true,
-      removeComments: true,
-      removeEmptyAttributes: true,
-      removeRedundantAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true,
-      sortAttributes: true,
-      sortClassName: true,
-      useShortDoctype: true
-    })
-  );
+  for await (const file of files) {
+    const content = marked(
+      (await readFile(join(__dirname, "..", `content/${file}`))).toString()
+      .replace("# staart.js.org", "")
+    );
+    const xhtml = (await readFile(join(__dirname, "..", "index.html")))
+      .toString()
+      .replace("</main>", `${content}</main>`);
+    const scss = (await readFile(
+      join(__dirname, "..", "styles.scss")
+    )).toString();
+    const css = <string>await renderScss(scss);
+    const html = xhtml
+      .replace("<!-- inject css -->", `<style>${css}</style>`)
+      .replace("<!-- year -->", new Date().getUTCFullYear().toString());
+    await copy(join(__dirname, "..", "assets"), join(__dirname, "public", "assets"));
+    await ensureFile(join(__dirname, "..", "public", file.replace(".md", ".html")));
+    await writeFile(
+      join(__dirname, "..", "public", file.replace(".md", ".html")),
+      minify(html, {
+        collapseBooleanAttributes: true,
+        collapseInlineTagWhitespace: true,
+        collapseWhitespace: true,
+        conservativeCollapse: true,
+        minifyCSS: true,
+        minifyJS: true,
+        minifyURLs: true,
+        removeAttributeQuotes: true,
+        removeComments: true,
+        removeEmptyAttributes: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        sortAttributes: true,
+        sortClassName: true,
+        useShortDoctype: true
+      })
+    );
+  }
 };
 
 const renderScss = (data: string) =>

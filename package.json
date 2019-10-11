@@ -9,10 +9,10 @@
     "compile": "tsc",
     "build": "yarn compile && yarn build-site",
     "build-site": "node dist/build.js",
-    "watch": "onchange '*.{html,scss,ts,json,md}' -- yarn build-site",
+    "watch": "onchange 'content/**/*.*' -- yarn build-site",
     "watch-prettier": "onchange '*.{html,scss,ts,json}' -- prettier --write {{changed}}",
     "watch-compile": "onchange 'build.ts' -- yarn compile",
-    "serve": "live-server dist --quiet",
+    "serve": "live-server public --quiet",
     "start": "concurrently 'yarn watch' 'yarn watch-prettier' 'yarn watch-compile' 'yarn serve'"
   },
   "devDependencies": {
