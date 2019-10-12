@@ -98,6 +98,10 @@ CACHE_CHECK_PERIOD = 1000        #        1k s
 
 ### Rate limits
 
+Rate limits help Staart mitigate some types of attacks. By default, users can do 60 requests/minute without an API key. With API key authentication, this is increased to 1,000 requests/minute. There is also a speed limit mechanism that delays requests by 100ms (in response time) per request if more than 500 are made in a minute.
+
+Brute force prevention is used on authentication endpoints, where only 50 requests per 5 minutes are allowed, and users have to wait for (an increasing amount of) some time before they can make another request.
+
 ```env
 ## Brute force is used for auth endpoints
 BRUTE_FREE_RETRIES = 50          # 50 requests
@@ -106,7 +110,7 @@ BRUTE_LIFETIME = 300000          #   in 5 mins
 ## Public limits
 PUBLIC_RATE_LIMIT_MAX = 60       # 60 requests
 PUBLIC_RATE_LIMIT_TIME = 60000   #    in 1 min
-SPEED_LIMIT_COUNT = 1000         # 1k requests
+SPEED_LIMIT_COUNT = 500         # 1k requests
 SPEED_LIMIT_TIME = 600000        #    in 1 min
 SPEED_LIMIT_DELAY = 100          # delay 100ms
 
@@ -117,7 +121,11 @@ RATE_LIMIT_TIME = 60000          #    in 1 min
 
 ### Expiry durations
 
-2299-12-31
+JWTs are used for authentication and emails, and you can configure their expiry duration. Email verification links are valid for one week, password reset links for a day, and location approval links for 10 minutes.
+
+In terms of authentication, a login session token is approved for 15 minutes and a refresh token is valid for 1 month.
+
+When a user creates an API key, they can set an expiry duration. The maximum expiry date is 2299-12-31 (roughly 300 years in the future), something that Microsoft uses, equivalent to `10413685800000` in JS Unix timestamp.
 
 ```env
 # JWT expiry durations
@@ -132,6 +140,8 @@ TOKEN_EXPIRY_API_KEY_MAX = 10413685800000
 
 ### Other config
 
+Settings like CORS and support for disposable emails can be set up too, along with a DSN for Sentry.
+
 ```env
 # Remove CORS headers without API key
 DISALLOW_OPEN_CORS = false
@@ -144,6 +154,8 @@ SENTRY_DSN = "https://<key>@sentry.io/<project>"
 ```
 
 ### OAuth2 credentials
+
+If you're setting up "Login with OAuth" services, you can set up your client and secret keys too.
 
 ```env
 GOOGLE_CLIENT_ID = "google-oauth2-client-id"
