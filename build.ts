@@ -14,12 +14,16 @@ const build = async () => {
     f => f.split("content/")[1]
   );
   for await (const file of files) {
-    const lastCommit = await getLastCommit(`content/${file}`);
-    const text =
+    let lastCommit;
+    try {
+      lastCommit = await getLastCommit(`content/${file}`);
+    } catch (error) {}
+    let text =
       (await readFile(join(__dirname, "..", `content/${file}`)))
         .toString()
-        .replace("# Home", "") +
-      `${
+        .replace("# Home", "");
+    if (lastCommit) {
+      text += `${
         lastCommit
           ? `\n\n<p class="post-footer">This page was last modified by <a href="${
               lastCommit.author.html_url
@@ -42,6 +46,7 @@ const build = async () => {
         0,
         6
       )}</a>. <a href="https://github.com/staart/staart.js.org/blob/master/content/${file}">Edit this page on GitHub</a></p>`;
+    }
     const content = marked(text);
     let extra = "";
     if (file === "sitemap.md") {
