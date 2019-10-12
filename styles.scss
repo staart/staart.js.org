@@ -88,8 +88,8 @@ header {
   a {
     display: inline-block;
     color: inherit;
-    &:hover,
-    &:focus {
+    &.logo:hover,
+    &.logo:focus {
       text-decoration: none;
     }
   }
