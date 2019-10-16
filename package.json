@@ -31,7 +31,7 @@
     "onchange": "^6.1.0",
     "prettier": "^1.18.2",
     "sass": "^1.23.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.6.4"
   },
   "dependencies": {
     "recursive-readdir": "^2.2.2"
