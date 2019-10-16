@@ -28,7 +28,7 @@
     "html-minifier": "^4.0.0",
     "live-server": "^1.2.1",
     "marked": "^0.7.0",
-    "onchange": "^6.0.0",
+    "onchange": "^6.1.0",
     "prettier": "^1.18.2",
     "sass": "^1.22.5",
     "typescript": "^3.5.3"
