@@ -1,10 +1,12 @@
 {
   "title": "Staart",
+  "hostname": "https://staart.js.org",
   "navbar": [
     "[🛠️ API](/api)",
     "[🌐 UI](/ui)",
     "[📑 Site](/site)",
     "[📱 Native](/native)",
-    "[🎨 CSS](/css)"
+    "[🎨 CSS](/css)",
+    "[🐱 GitHub](https://github.com/staart)"
   ]
 }
