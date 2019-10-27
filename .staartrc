@@ -1,0 +1,10 @@
+{
+  "title": "Staart",
+  "navbar": [
+    "[🛠️ API](/api)",
+    "[🌐 UI](/ui)",
+    "[📑 Site](/site)",
+    "[📱 Native](/native)",
+    "[🎨 CSS](/css)"
+  ]
+}

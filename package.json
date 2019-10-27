@@ -6,12 +6,13 @@
   "author": "Anand Chowdhary <mail@anandchowdhary.com>",
   "license": "MIT",
   "scripts": {
-    "build": "@staart/site",
+    "build": "site",
     "watch": "onchange 'content/**/*.*' -- yarn build",
     "serve": "live-server public --quiet",
     "start": "concurrently 'yarn watch' 'yarn serve'"
   },
   "devDependencies": {
+    "@staart/site": "^1.0.7",
     "concurrently": "^5.0.0",
     "live-server": "^1.2.1"
   },
