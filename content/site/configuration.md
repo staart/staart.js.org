@@ -33,3 +33,9 @@ Staart Site uses [Cosmiconfig](https://github.com/davidtheclark/cosmiconfig), so
 | `noSitemap` | Don't generate sitemaps | `false` |
 | `noContentList` | Don't add content lists | `false` |
 | `noDelayWithoutToken` | Don't delay GitHub API requests | `false` |
+| `noLastModified` | Don't add last modified commit info | `false` |
+| `noGenerator` | Don't add meta generator tag | `false` |
+| `noSyntaxHighlighting` | Disable code syntax highlighting | `false` |
+| `noShieldSchema` | Don't generate Shields schema | `false` |
+| `shieldSchemaLabel` | Label text for Shields schema | `docs` |
+| `shieldSchemaColor` | Badge color in Shields schema | `blueviolet` |
