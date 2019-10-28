@@ -62,13 +62,24 @@ STRIPE_PRODUCT_ID = "stripe-product-id"
 
 We use AWS's ElasticSearch service to track events, analytics, and server logs. Like the SES step, you can create credentials for the ElasticSearch service, enter an AWS region, and the host URL.
 
-You can specify an index prefix for server logs and events. Events keep track of security-related changes, such as when users log in or change their billing details. The logs will include the date after prefix as an index; for example, `staart-logs-` becomes `staart-logs-2019-10-11` if today is October 10, 2019.
-
 ```env
 AWS_ELASTIC_ACCESS_KEY = "aws-access-key-xxxxxxxxxx"
 AWS_ELASTIC_SECRET_KEY = "aws-secret-key-xxxxxxxxxx"
 AWS_ELASTIC_HOST = "https://name.region.es.amazonaws.com"
 AWS_ELASTIC_REGION = "eu-west-2"
+```
+
+Alternately, you can also use a custom ElasticSearch service if you don't want to use AWS. In this case, you have to specify the host, log, and API version.
+
+```env
+ELASTIC_HOST = "localhost:9200"
+ELASTIC_LOG = "trace"
+ELASTIC_API_VERSION = "7.2"
+```
+
+You can specify an index prefix for server logs and events. Events keep track of security-related changes, such as when users log in or change their billing details. The logs will include the date after prefix as an index; for example, `staart-logs-` becomes `staart-logs-2019-10-11` if today is October 10, 2019.
+
+```env
 ELASTIC_LOGS_PREFIX = "staart-logs-"
 ELASTIC_EVENTS_PREFIX = "staart-events-"
 ```
