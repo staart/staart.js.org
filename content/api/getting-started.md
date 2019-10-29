@@ -2,7 +2,7 @@
 
 To get started with your Staart backend, you have three options:
 
-1. **Preferred:** Click on the "Use this template" button on the [GitHub repo](https://github.com/o15y/staart) and GitHub will create a new repo (without git history) in your account, or
+1. **Preferred:** Click on the "Use this template" button on the [GitHub repo](https://github.com/staart/api) and GitHub will create a new repo (without git history) in your account, or
 2. Click on the "Import repository" link under "New" and enter the repo URL to make a duplicate repo in your account, or
 3. Fork this repo to your account (your contributions will not be counted).
 
