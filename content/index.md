@@ -16,6 +16,12 @@ Staart UI is a frontend starter with built-in landing pages, authentication, set
 
 [Docs](/ui) [GitHub](https://github.com/staart/ui) [npm](https://npmjs.com/package/@staart/ui)
 
+### 📑 Staart Site
+
+Staart Site is a static site generator for helpdesk or documentation websites. It creates beautiful, accessible, and ultra-lightweight websites that score 100/100 on Lightbox.
+
+[Docs](/site) [GitHub](https://github.com/staart/site) [npm](https://npmjs.com/package/@staart/site)
+
 ### 📱 Staart Native
 
 Staart Native is a smartphone app starter in React Native using Expo with built-in authentication and Start UI webviews.
