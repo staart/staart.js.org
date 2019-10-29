@@ -12,5 +12,7 @@
   "googleSiteVerification": "OaXrIDhMiIOKAvtNjdXsyXM9HPG8BEvN-emVGCfPkeE",
   "twitterPublisher": "o15y",
   "twitterCreator": "AnandChowdhary",
-  "seoImage": "https://staart.js.org/assets/smo.png"
+  "seoImage": "https://staart.js.org/assets/smo.png",
+  "noDelayWithoutToken": true,
+  "footerNavbar": ["about.md"]
 }
