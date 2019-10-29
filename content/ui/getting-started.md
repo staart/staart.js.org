@@ -54,7 +54,7 @@ const config: Configuration = {
 
 ### Backend URL
 
-Staart UI is a webapp using the [Staart backend](/backend), so you need to configure your backend API's URL:
+Staart UI is a webapp using the [Staart API](/api), so you need to configure your backend API's URL:
 
 ```ts
 const config: Configuration = {
@@ -69,7 +69,7 @@ const config: Configuration = {
 }
 ```
 
-In the above example, you have the Staart backend running on https://example.com in production, and on `4000` port locally. The `v1` is a prefix for endpoint version control.
+In the above example, you have Staart API running on https://example.com in production, and on `4000` port locally. The `v1` is a prefix for endpoint version control.
 
 ### Frontend API key
 
@@ -77,7 +77,7 @@ Finally, and most importantly, remove and then update the API key for your front
 
 This is because the default API key given in Staart UI will **not** work on your frontend, it's domain-restricted.
 
-The Staart backend has a public rate limit, but it's a good idea to add an API key here with domain restrictions for your frontend app -- so, as soon as you're up and running, use the UI to create an API key and add it back here.
+Staart API has a public rate limit, but it's a good idea to add an API key here with domain restrictions for your frontend app -- so, as soon as you're up and running, use the UI to create an API key and add it back here.
 
 ## Build and run server
 

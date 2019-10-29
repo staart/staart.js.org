@@ -30,7 +30,7 @@ npm install
 
 ## Setup services
 
-Set up your environment variables by creating a `.env` file in your project root. You can also rename the `.env.example` file to `.env` for a quick start. [Learn how to set up environment variables](/backend/setting-up-environment-variables.html).
+Set up your environment variables by creating a `.env` file in your project root. You can also rename the `.env.example` file to `.env` for a quick start. [Learn how to set up environment variables](/api/setting-up-environment-variables.html).
 
 Set up your database structure by running the contents of the `schema.sql` file in your SQL client and enter the database credentials in your `.env` file.
 
