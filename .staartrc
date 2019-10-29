@@ -13,6 +13,5 @@
   "twitterPublisher": "o15y",
   "twitterCreator": "AnandChowdhary",
   "seoImage": "https://staart.js.org/assets/smo.png",
-  "noDelayWithoutToken": true,
   "footerNavbar": ["about.md"]
 }
