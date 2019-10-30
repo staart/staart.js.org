@@ -9,10 +9,10 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@staart/site@1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@staart/site/-/site-1.3.1.tgz#c57866fe12518762d4a156ec9b88d4ae8a586073"
-  integrity sha512-UWXkXNRhT33EUnz5zQFkJo/Tuu2FT9nXVEMsJqcb7DNuV0NVN9SWS1GvTdrZ+TpRi2+9/QVirvfoj2qty7aNbQ==
+"@staart/site@1.3.2":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@staart/site/-/site-1.3.2.tgz#078eacd1111f667d22109adfaa39254f4926dd2b"
+  integrity sha512-bi8ygPYQ57HAONJB39GHT+KCgUOSEwfMqGCpsZop4pa0jQ6JP/wb2RunrEjZLe8UmwYznOuuI/wpcggUuEN43g==
   dependencies:
     axios "^0.19.0"
     concurrently "^5.0.0"
