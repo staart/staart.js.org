@@ -9,10 +9,10 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@staart/site@1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@staart/site/-/site-1.5.1.tgz#ee8819701fbf866809d6d8829a3e2f0932502b29"
-  integrity sha512-AdMX4vvEMLFY1KQvyIgDntvDaxHmHXlrUzfcMnXauNqRl23yuD/Y3YhEnF9a/ZZ04Dyn1iCZW5Jo7Sf1qiNjnA==
+"@staart/site@1.7.13":
+  version "1.7.13"
+  resolved "https://registry.yarnpkg.com/@staart/site/-/site-1.7.13.tgz#071dfe2300bc50093d4bedbbe784eae14ef2dabb"
+  integrity sha512-tsksfcPFI467+V3GNlOG5qIAyRB57/BGgramj4uqTE0oIlaRqCrSBOZoYd3Zofj0Onjvll0owCw0IbFwdXlmQg==
   dependencies:
     axios "^0.19.0"
     concurrently "^5.0.0"
@@ -25,19 +25,24 @@
     live-server "^1.2.1"
     marked "^0.7.0"
     minimist "^1.2.0"
-    node-cache "^5.0.0"
+    node-cache "^5.0.1"
     recursive-readdir "^2.2.2"
     remove-markdown "^0.3.0"
-    sass "^1.23.2"
+    sass "^1.23.3"
     signale "^1.4.0"
-    sitemap "^5.0.1"
+    sitemap "^5.1.0"
     truncate "^2.1.0"
     yaml "^1.7.2"
 
-"@types/node@*", "@types/node@^12.11.5":
+"@types/node@*":
   version "12.11.7"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.11.7.tgz#57682a9771a3f7b09c2497f28129a0462966524a"
   integrity sha512-JNbGaHFCLwgHn/iCckiGSOZ1XYHsKFwREtzPwSGCVld1SGhOlmZw2D4ZI94HQCrBHbADzW9m4LER/8olJTRGHA==
+
+"@types/node@^12.12.3":
+  version "12.12.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.6.tgz#a47240c10d86a9a57bb0c633f0b2e0aea9ce9253"
+  integrity sha512-FjsYUPzEJdGXjwKqSpE0/9QEh6kzhTAeObA54rn6j3rR4C/mzpI9L0KNfoeASSPMMdxIsoJuCLDWcM/rVjIsSA==
 
 "@types/sax@^1.2.0":
   version "1.2.0"
@@ -1567,10 +1572,10 @@ no-case@^2.2.0:
   dependencies:
     lower-case "^1.1.1"
 
-node-cache@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/node-cache/-/node-cache-5.0.0.tgz#3cbf44b15eb1f955a30f09caaa4037008e84729f"
-  integrity sha512-Wtt0K7r8ojiziSvg7Ga5NZ9wSTTY0rRywnXaqB71NiXc2D6R4QdeQCzwOpAwKzIXZoGmj+ru5OfRnwYdi5T8rg==
+node-cache@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/node-cache/-/node-cache-5.0.1.tgz#ae9f4e4c486de4731391470bf518d5228ea4877e"
+  integrity sha512-W+a/8TIkGThCdyDeKzDWqf3qUSHDc+Zo/a55AIfGWB5y7l2mMTtBbRya3nzyzB6FJap0vWIaa/4mnFVm6HGfew==
   dependencies:
     clone "2.x"
 
@@ -2089,7 +2094,7 @@ safe-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass@^1.23.2:
+sass@^1.23.3:
   version "1.23.3"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.23.3.tgz#f07503b9e8d2bcf06ef69e8beea5d085589b1620"
   integrity sha512-1DKRZxJMOh4Bme16AbWTyYeJAjTlrvw2+fWshHHaepeJfGq2soFZTnt0YhWit+bohtDu4LdyPoEj6VFD4APHog==
@@ -2189,12 +2194,12 @@ signale@^1.4.0:
     figures "^2.0.0"
     pkg-conf "^2.1.0"
 
-sitemap@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/sitemap/-/sitemap-5.0.1.tgz#4c70906f949df171701a0a48ef3f0e7bb28fcd65"
-  integrity sha512-2pg1i9ow9nCOkbzWIsoiiRtoZtT/3LCzyLO6BjsfRWoEjT1kgkEbhou0B3EyEeIC1dipaXIAH7DFFlQofAKi7g==
+sitemap@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/sitemap/-/sitemap-5.1.0.tgz#60c88915e20f8cd0dcd5906dac8f2ec4c0d8de68"
+  integrity sha512-RAOCHYPbALEaIlqlGs46LZ9RFfh+61YYjexMqri4h+gsW6y0MLZ+WB4eJCopVP9WCWsng6z9JSPHqcKtjoydLw==
   dependencies:
-    "@types/node" "^12.11.5"
+    "@types/node" "^12.12.3"
     "@types/sax" "^1.2.0"
     arg "^4.1.1"
     sax "^1.2.4"
