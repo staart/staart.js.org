@@ -25,10 +25,10 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@staart/site@1.7.14":
-  version "1.7.14"
-  resolved "https://registry.yarnpkg.com/@staart/site/-/site-1.7.14.tgz#15a84261492dbadedd0b5f6aeab53ff5f3e2a2f7"
-  integrity sha512-yKAZX7YYujR/cKYKaGiogA4WJpebK0fzhPT+tpBaADk30Cr4VsmNVAT1CbPEPaWXCCpRsPCqzYAEKpriBIWYtw==
+"@staart/site@1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@staart/site/-/site-1.8.2.tgz#8936c7ca4856ec3690ebb17acaaefd631ae8e6d1"
+  integrity sha512-nhfTrl8Qf+KIQp0nak4n09sYsqX2FBTLjQwk4fxtuvu7HRsBIKwZ4f0NSSj3xTw+IAofMxURZ1+0qF25CqR7tA==
   dependencies:
     axios "^0.19.0"
     concurrently "^5.0.0"
@@ -36,7 +36,7 @@
     front-matter "^3.0.2"
     fs-extra "^8.1.0"
     git-url-parse "^11.1.2"
-    handlebars "^4.5.1"
+    handlebars "^4.5.2"
     html-minifier "^4.0.0"
     live-server "^1.2.1"
     marked "^0.7.0"
@@ -917,10 +917,10 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
   integrity sha512-a30VEBm4PEdx1dRB7MFK7BejejvCvBronbLjht+sHuGYj8PHs7M/5Z+rt5lw551vZ7yfTCj4Vuyy3mSJytDWRQ==
 
-handlebars@^4.5.1:
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.5.1.tgz#8a01c382c180272260d07f2d1aa3ae745715c7ba"
-  integrity sha512-C29UoFzHe9yM61lOsIlCE5/mQVGrnIOrOq7maQl76L7tYPCgC1og0Ajt6uWnX4ZTxBPnjw+CUvawphwCfJgUnA==
+handlebars@^4.5.2:
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.5.2.tgz#5a4eb92ab5962ca3415ac188c86dc7f784f76a0f"
+  integrity sha512-29Zxv/cynYB7mkT1rVWQnV7mGX6v7H/miQ6dbEpYTKq5eJBN7PsRB+ViYJlcT6JINTSu4dVB9kOqEun78h6Exg==
   dependencies:
     neo-async "^2.6.0"
     optimist "^0.6.1"
