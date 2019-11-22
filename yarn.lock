@@ -25,10 +25,10 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@staart/site@1.9.1":
-  version "1.9.1"
-  resolved "https://registry.yarnpkg.com/@staart/site/-/site-1.9.1.tgz#3a3a988ad25b3967144c97c3d92ce1d3f509ac28"
-  integrity sha512-Hh7YPIoPTw4+wPUzzC5eJhh0owY4nq78zHKyVpGD3a7NvCVFQUnsrJXahDL985wm+gHb3p3AXyelF2uxv5elLw==
+"@staart/site@1.10.9":
+  version "1.10.9"
+  resolved "https://registry.yarnpkg.com/@staart/site/-/site-1.10.9.tgz#4fe5f3300d3eeb8dfa9e5e45025b444ddf612753"
+  integrity sha512-oZGpCwmUW86+PJuIiI/5yDy5Za/OErJRKgEB6mFkYhSHoAn/XHefMiUvNFc5j3nCpuVAG+lzxqSsAq7PZjMQ/A==
   dependencies:
     axios "^0.19.0"
     concurrently "^5.0.0"
@@ -36,15 +36,15 @@
     front-matter "^3.0.2"
     fs-extra "^8.1.0"
     git-url-parse "^11.1.2"
-    handlebars "^4.5.2"
+    handlebars "^4.5.3"
     html-minifier "^4.0.0"
     live-server "^1.2.1"
     marked "^0.7.0"
     minimist "^1.2.0"
-    node-cache "^5.0.1"
+    node-cache "^5.0.2"
     recursive-readdir "^2.2.2"
     remove-markdown "^0.3.0"
-    sass "^1.23.3"
+    sass "^1.23.7"
     signale "^1.4.0"
     sitemap "^5.1.0"
     truncate "^2.1.0"
@@ -917,10 +917,10 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
   integrity sha512-a30VEBm4PEdx1dRB7MFK7BejejvCvBronbLjht+sHuGYj8PHs7M/5Z+rt5lw551vZ7yfTCj4Vuyy3mSJytDWRQ==
 
-handlebars@^4.5.2:
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.5.2.tgz#5a4eb92ab5962ca3415ac188c86dc7f784f76a0f"
-  integrity sha512-29Zxv/cynYB7mkT1rVWQnV7mGX6v7H/miQ6dbEpYTKq5eJBN7PsRB+ViYJlcT6JINTSu4dVB9kOqEun78h6Exg==
+handlebars@^4.5.3:
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.5.3.tgz#5cf75bd8714f7605713511a56be7c349becb0482"
+  integrity sha512-3yPecJoJHK/4c6aZhSvxOyG4vJKDshV36VHp0iVCDVh7o9w2vwi3NSnL2MMPj3YdduqaBcu7cGbggJQM0br9xA==
   dependencies:
     neo-async "^2.6.0"
     optimist "^0.6.1"
@@ -1590,10 +1590,10 @@ no-case@^2.2.0:
   dependencies:
     lower-case "^1.1.1"
 
-node-cache@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/node-cache/-/node-cache-5.0.1.tgz#ae9f4e4c486de4731391470bf518d5228ea4877e"
-  integrity sha512-W+a/8TIkGThCdyDeKzDWqf3qUSHDc+Zo/a55AIfGWB5y7l2mMTtBbRya3nzyzB6FJap0vWIaa/4mnFVm6HGfew==
+node-cache@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/node-cache/-/node-cache-5.0.2.tgz#f295ce2329f215da726e54c508bc4c5e2e0b4de9"
+  integrity sha512-wqJIYqBbOaYycAHNXgWx7fYJA5S3KcwpJqwuDuHWGKzzG8vIvj80eN47+/FTioUdE96AuiTHoAtsiTVOBLrM9A==
   dependencies:
     clone "2.x"
 
@@ -2134,10 +2134,10 @@ safe-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass@^1.23.3:
-  version "1.23.3"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.23.3.tgz#f07503b9e8d2bcf06ef69e8beea5d085589b1620"
-  integrity sha512-1DKRZxJMOh4Bme16AbWTyYeJAjTlrvw2+fWshHHaepeJfGq2soFZTnt0YhWit+bohtDu4LdyPoEj6VFD4APHog==
+sass@^1.23.7:
+  version "1.23.7"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.23.7.tgz#090254e006af1219d442f1bff31e139d5e085dff"
+  integrity sha512-cYgc0fanwIpi0rXisGxl+/wadVQ/HX3RhpdRcjLdj2o2ye/sxUTpAxIhbmJy3PLQgRFbf6Pn8Jsrta2vdXcoOQ==
   dependencies:
     chokidar ">=2.0.0 <4.0.0"
 
