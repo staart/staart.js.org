@@ -12,7 +12,7 @@
     "start": "concurrently 'yarn watch' 'yarn serve'"
   },
   "devDependencies": {
-    "@staart/site": "1.10.11",
+    "@staart/site": "1.11.1",
     "concurrently": "^5.0.1",
     "live-server": "^1.2.1"
   },

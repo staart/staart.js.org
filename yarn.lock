@@ -25,13 +25,13 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@staart/site@1.10.11":
-  version "1.10.11"
-  resolved "https://registry.yarnpkg.com/@staart/site/-/site-1.10.11.tgz#283dcaa801ad05cd81a78863afb214e7f423fdb4"
-  integrity sha512-Uj/M1q6eQsA/pM7k6Skoqu5syPnegbywO4DBDeIyX+zrgDnvP4VPOq0GHw4MEX9+sK4rqvywPa6zFCecSXB+Yw==
+"@staart/site@1.11.1":
+  version "1.11.1"
+  resolved "https://registry.yarnpkg.com/@staart/site/-/site-1.11.1.tgz#0abc2e944a3910dd5525dc525f8f89d16526b125"
+  integrity sha512-yNnhSArNVRIcHyqiVwiWmXSn5uuCJoPkMgtID1uFT+Mg7C75DciNkl/RKTppQknHkaudWCpJvMeUkM6T/Ho70A==
   dependencies:
     axios "^0.19.0"
-    concurrently "^5.0.0"
+    concurrently "^5.0.1"
     cosmiconfig "^6.0.0"
     front-matter "^3.0.2"
     fs-extra "^8.1.0"
@@ -41,7 +41,7 @@
     live-server "^1.2.1"
     marked "^0.7.0"
     minimist "^1.2.0"
-    node-cache "^5.0.2"
+    node-cache "^5.1.0"
     recursive-readdir "^2.2.2"
     remove-markdown "^0.3.0"
     sass "^1.23.7"
@@ -436,7 +436,7 @@ concat-map@0.0.1:
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
 
-concurrently@^5.0.0, concurrently@^5.0.1:
+concurrently@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/concurrently/-/concurrently-5.0.1.tgz#9d15e0e7bb7ebe5c3bcd86deb8393501c35dd003"
   integrity sha512-fPKUlOAXEXpktp3z7RqIvzTSCowfDo8oQbdKoGKGZVm+G2hGFbIIAFm4qwWcGl/sIHmpMSgPqeCbjld3kdPXvA==
@@ -1509,10 +1509,10 @@ no-case@^2.2.0:
   dependencies:
     lower-case "^1.1.1"
 
-node-cache@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/node-cache/-/node-cache-5.0.2.tgz#f295ce2329f215da726e54c508bc4c5e2e0b4de9"
-  integrity sha512-wqJIYqBbOaYycAHNXgWx7fYJA5S3KcwpJqwuDuHWGKzzG8vIvj80eN47+/FTioUdE96AuiTHoAtsiTVOBLrM9A==
+node-cache@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/node-cache/-/node-cache-5.1.0.tgz#266786c28dcec0fd34385ee29c383e6d6f1aa5de"
+  integrity sha512-gFQwYdoOztBuPlwg6DKQEf50G+gkK69aqLnw4djkmlHCzeVrLJfwvg9xl4RCAGviTIMUVoqcyoZ/V/wPEu/VVg==
   dependencies:
     clone "2.x"
 
