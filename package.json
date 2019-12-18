@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@staart/site": "1.11.1",
-    "concurrently": "^5.0.1",
+    "concurrently": "^5.0.2",
     "live-server": "^1.2.1"
   },
   "dependencies": {
