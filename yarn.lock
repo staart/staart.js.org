@@ -25,13 +25,13 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@staart/site@1.11.1":
-  version "1.11.1"
-  resolved "https://registry.yarnpkg.com/@staart/site/-/site-1.11.1.tgz#0abc2e944a3910dd5525dc525f8f89d16526b125"
-  integrity sha512-yNnhSArNVRIcHyqiVwiWmXSn5uuCJoPkMgtID1uFT+Mg7C75DciNkl/RKTppQknHkaudWCpJvMeUkM6T/Ho70A==
+"@staart/site@1.11.2":
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/@staart/site/-/site-1.11.2.tgz#e7a1f609d3b3e5a8cc4f92cf39dad0c658c603bf"
+  integrity sha512-hJF4Y2+9H2Jl20qe/7wBCAvlfXIEx74VVg+RC0ppBCAsKmdsswvuto5uzuQwjJN1+9Au2pRr9aMarsUVOZTKJg==
   dependencies:
     axios "^0.19.0"
-    concurrently "^5.0.1"
+    concurrently "^5.0.2"
     cosmiconfig "^6.0.0"
     front-matter "^3.0.2"
     fs-extra "^8.1.0"
@@ -39,7 +39,7 @@
     handlebars "^4.5.3"
     html-minifier "^4.0.0"
     live-server "^1.2.1"
-    marked "^0.7.0"
+    marked "^0.8.0"
     minimist "^1.2.0"
     node-cache "^5.1.0"
     recursive-readdir "^2.2.2"
@@ -436,7 +436,7 @@ concat-map@0.0.1:
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
 
-concurrently@^5.0.1, concurrently@^5.0.2:
+concurrently@^5.0.2:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/concurrently/-/concurrently-5.0.2.tgz#4d2911018c0f15ddec34a8e668fc48dced7f3b1e"
   integrity sha512-iUNVI6PzKO0RVXV9pHWM0khvEbELxf3XLIoChaV6hHyoIaJuxQWZiOwlNysnJX5khsfvIK66+OJqRdbYrdsR1g==
@@ -1342,10 +1342,10 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-marked@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.7.0.tgz#b64201f051d271b1edc10a04d1ae9b74bb8e5c0e"
-  integrity sha512-c+yYdCZJQrsRjTPhUx7VKkApw9bwDkNbHUKo1ovgcfDjb2kc8rLuRbIFyXL5WOEUwzSSKo3IXpph2K6DqB/KZg==
+marked@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.8.0.tgz#ec5c0c9b93878dc52dd54be8d0e524097bd81a99"
+  integrity sha512-MyUe+T/Pw4TZufHkzAfDj6HarCBWia2y27/bhuYkTaiUnfDYFnCP3KUN+9oM7Wi6JA2rymtVYbQu3spE0GCmxQ==
 
 micromatch@^3.1.10, micromatch@^3.1.4:
   version "3.1.10"
