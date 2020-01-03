@@ -14,6 +14,16 @@ Then, rename the package name (this is required for Staart's updates to work pro
 }
 ```
 
+## Add Maxmind license key
+
+The first step, even before you install dependencies, is to add the Maxmind license key. This is because of [runk/node-geolite2#17](https://github.com/runk/node-geolite2/issues/17), where download and using the GeoIP2 database now requires a license key.
+
+To get a license key, sign up for free on the [Maxmind GeoLite2](https://www.maxmind.com/en/geolite2/signup) website. Then, add this license key as an environment variable:
+
+```bash
+export MAXMIND_LICENSE_KEY="your license key"
+```
+
 ## Install dependencies
 
 Install the dependencies using Yarn:
