@@ -1,6 +1,6 @@
 {
   "title": "Staart",
-  "hostname": "https://staart.js.org",
+  "baseUrl": "https://staart.js.org",
   "navbar": [
     "[🛠️ API](/api)",
     "[🌐 UI](/ui)",
@@ -14,5 +14,6 @@
   "twitterPublisher": "o15y",
   "twitterCreator": "AnandChowdhary",
   "seoImage": "https://staart.js.org/assets/smo.png",
-  "footerNavbar": ["about.md"]
+  "footerNavbar": ["about.md"],
+  "fancyLinks": true
 }
