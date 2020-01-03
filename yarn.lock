@@ -25,10 +25,10 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@staart/site@1.11.2":
-  version "1.11.2"
-  resolved "https://registry.yarnpkg.com/@staart/site/-/site-1.11.2.tgz#e7a1f609d3b3e5a8cc4f92cf39dad0c658c603bf"
-  integrity sha512-hJF4Y2+9H2Jl20qe/7wBCAvlfXIEx74VVg+RC0ppBCAsKmdsswvuto5uzuQwjJN1+9Au2pRr9aMarsUVOZTKJg==
+"@staart/site@1.12.5":
+  version "1.12.5"
+  resolved "https://registry.yarnpkg.com/@staart/site/-/site-1.12.5.tgz#8e02b055fb537de4dc60f1107ed80c204f85531a"
+  integrity sha512-1jvwaESu5Q2QjW5/Fq7meiFPrcG9jNe6sPbn9iY6LmmL3ZXgXVZzV11xrcBtcPHC6egD88EBv9R7+rFOIMqI+w==
   dependencies:
     axios "^0.19.0"
     concurrently "^5.0.2"
@@ -44,7 +44,7 @@
     node-cache "^5.1.0"
     recursive-readdir "^2.2.2"
     remove-markdown "^0.3.0"
-    sass "^1.23.7"
+    sass "^1.24.0"
     signale "^1.4.0"
     sitemap "^5.1.0"
     truncate "^2.1.0"
@@ -2009,10 +2009,10 @@ safe-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass@^1.23.7:
-  version "1.23.7"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.23.7.tgz#090254e006af1219d442f1bff31e139d5e085dff"
-  integrity sha512-cYgc0fanwIpi0rXisGxl+/wadVQ/HX3RhpdRcjLdj2o2ye/sxUTpAxIhbmJy3PLQgRFbf6Pn8Jsrta2vdXcoOQ==
+sass@^1.24.0:
+  version "1.24.1"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.24.1.tgz#5b32ef0ee04403939d96a4963a42fd90e9408691"
+  integrity sha512-lMhl1V4Bj/lm+5c4sIt3fVzfmkyqqztpypr9dI8N0XsaeLs+gWow0der0e+I9WsRQK86SLXfEUgleERqPbR5Jw==
   dependencies:
     chokidar ">=2.0.0 <4.0.0"
 
