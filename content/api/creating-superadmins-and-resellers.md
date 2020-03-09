@@ -6,15 +6,11 @@ Users with the super admin role can see a dashboard where they can see all serve
 
 Before inviting any employees consider setting up forceTwoFactor, onlyAllowDomain and ipRestrictions for your 'master' organization. 
 
-Invite the user to your organization. Once the user has created their account you can escalate them to admin permissions in SQL.
+Invite the new user to your organization. Once the user has created their account you can escalate them to admin permissions in SQL.
 
-```bash
-select * from users WHERE primaryEmail = 'employee@example.com';
-```
+Get the ID of the user you want to escalate the permission for. You may decide to double check you have the right ID by verifying createdAt, name etc. Finally use the below SQL (subsituting ID with the user ID) to set the role for this user to Super Admin.
 
-Check that this is indeed the user you wish to escalate by verifying createdAt, name etc. Once you have verified this grab the user ID which you will use to update the role
-
-```bash
+```sql
 update users SET role = '3' WHERE id = 'xx';
 
 ```
@@ -24,13 +20,9 @@ Reseller functionality is WIP.
 
 Once the user has created their account you can escalate them to Reseller permissions in SQL.
 
-```bash
-select * from users WHERE primaryEmail = 'employee@example.com';
-```
+Get the ID of the user you want to escalate the permission for. You may decide to double check you have the right ID by verifying createdAt, name etc. Finally use the below SQL (subsituting ID with the user ID) to set the role for this user to Reseller.
 
-Check that this is indeed the user you wish to escalate by verifying createdAt, name etc. Once you have verified this grab the user ID which you will use to update the role.
-
-```bash
+```sql
 update users SET role = '2' WHERE id = 'xx';
 
 ```
