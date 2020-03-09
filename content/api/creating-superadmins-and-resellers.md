@@ -6,7 +6,7 @@ Users with the super admin role can see a dashboard where they can see all serve
 
 Before inviting any employees consider setting up forceTwoFactor, onlyAllowDomain and ipRestrictions for your 'master' organization. 
 
-Invite the user to your organization. Once the user has created thier account you can escalate them to admin permissions in SQL.
+Invite the user to your organization. Once the user has created their account you can escalate them to admin permissions in SQL.
 
 ```bash
 select * from users WHERE primaryEmail = 'employee@example.com';
@@ -22,7 +22,7 @@ update users SET role = '3' WHERE id = 'xx';
 
 Reseller functionality is WIP. 
 
-Once the user has created thier account you can escalate them to Reseller permissions in SQL.
+Once the user has created their account you can escalate them to Reseller permissions in SQL.
 
 ```bash
 select * from users WHERE primaryEmail = 'employee@example.com';
