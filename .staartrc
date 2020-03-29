@@ -15,5 +15,6 @@
   "twitterCreator": "AnandChowdhary",
   "seoImage": "https://staart.js.org/assets/smo.png",
   "footerNavbar": ["about.md"],
-  "fancyLinks": true
+  "fancyLinks": true,
+  "netlify": true
 }
